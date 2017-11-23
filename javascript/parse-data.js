@@ -16,9 +16,12 @@
   // set theData here to an empty string
   
   // create a loop around this line with "for ... in" (look it up)_
-  let theData = `${obj.lecturers[1].firstName} ${obj.lecturers[1].lastName}`;
+ // let theData = `${obj.lecturers[1].firstName} ${obj.lecturers[1].lastName}`;
+  let theData = "";
   // end the for loop here
-  
+  for (key in obj.lecturers) { 
+  theData += `<li>${obj.lecturers[key].firstName} ${obj.lecturers[key].lastName}</li>`;}
+	  
   // populates the chosen element's content with the data:
   demoData.innerHTML = theData; 
 
@@ -28,3 +31,8 @@
     results on the page, styled with CSS.
   */
 }());
+
+
+//let theData = "";
+//for (key in obj.lecturers) {
+//	theData += `<li>${obj.lecturers[key].firstName} ${obj.lecturers[key].lastName}</li>}
